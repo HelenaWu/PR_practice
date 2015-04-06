@@ -4,7 +4,34 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'bootstrap-sass'
+gem 'faker'
+gem 'devise'
+gem 'figaro', '1.0'
+gem 'pundit'
+gem 'redcarpet'
+gem 'carrierwave'
+gem 'mini_magick', '~> 3.5.0'
+gem 'fog'
+gem 'will_paginate', '~>3.0.5'
+gem 'newrelic_rpm'
+gem 'factory_girl_rails', '~> 4.0'
+gem 'puma'
+
+group :production do  
+  gem 'pg'
+  gem 'rails_12factor'
+end
+group :development do
+  gem 'rails-erd'
+  gem 'sqlite3'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
